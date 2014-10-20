@@ -1,8 +1,9 @@
-em-apt-tweaks (0.1ubuntu1) trusty; urgency=low
+em-apt-tweaks (0.2) trusty; urgency=high
 
   * Fix debhelper-but-no-misc-depends
+  * Replaced 80notrans with the proper file
 
- -- Volodymyr Kolesnykov <volodymyr@wildwolf.name>  Mon, 20 Oct 2014 05:18:08 +0300
+ -- Volodymyr Kolesnykov <volodymyr@wildwolf.name>  Mon, 20 Oct 2014 05:23:30 +0300
 
 em-apt-tweaks (0.1) precise; urgency=low
 
