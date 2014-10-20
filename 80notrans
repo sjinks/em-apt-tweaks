@@ -1,0 +1,32 @@
+#!/bin/sh
+
+cat > /etc/dpkg/dpkg.cfg.d/50exclude <<EOT
+path-exclude=/usr/share/doc/*
+path-exclude=/usr/share/man/*
+path-exclude=/usr/share/locale/*
+path-include=/usr/share/locale/locale.alias
+path-include=/usr/share/locale/en/*
+path-include=/usr/share/locale/en_US/*
+path-include=/usr/share/locale/en_US.UTF-8/*
+EOT
+
+cat > /etc/apt/apt.conf.d/97nocache <<EOT
+Dir::Cache {
+  srcpkgcache "";
+  pkgcache "";
+}
+EOT
+
+cat > /etc/apt/apt.conf.d/98compress <<EOT
+Acquire::GzipIndexes "true";
+Acquire::CompressionTypes::Order:: "gz";
+EOT
+
+cat > /etc/apt/apt.conf.d/98translations <<EOT
+Acquire::Languages "none";
+EOT
+
+apt-get -qq update
+DEBIAN_FRONTEND=noninteractive apt-get -qq upgrade
+DEBIAN_FRONTEND=noninteractive apt-get -qq install --no-install-recommends auditd ntp bind9 wget
+apt-get clean

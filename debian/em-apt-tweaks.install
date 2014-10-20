@@ -1,0 +1,3 @@
+70nocache  etc/apt/apt.conf.d
+75compress etc/apt/apt.conf.d
+80notrans  etc/apt/apt.conf.d

@@ -1,0 +1,12 @@
+Source: em-apt-tweaks
+Section: misc
+Priority: optional
+Maintainer: Volodymyr Kolesnykov <volodymyr@wildwolf.name>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.9.5
+
+Package: em-apt-tweaks
+Architecture: all
+Depends: apt
+Description: Tweaks for APT used by EM
+ Tweaks for APT to minimize the usage of the disk space.
