@@ -1,3 +1,9 @@
+em-apt-tweaks (0.1ubuntu1) trusty; urgency=low
+
+  * Fix debhelper-but-no-misc-depends
+
+ -- Volodymyr Kolesnykov <volodymyr@wildwolf.name>  Mon, 20 Oct 2014 05:18:08 +0300
+
 em-apt-tweaks (0.1) precise; urgency=low
 
   * Initial release

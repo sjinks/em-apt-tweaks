@@ -7,6 +7,6 @@ Standards-Version: 3.9.5
 
 Package: em-apt-tweaks
 Architecture: all
-Depends: apt
+Depends: ${misc:Depends}, apt
 Description: Tweaks for APT used by EM
  Tweaks for APT to minimize the usage of the disk space.
